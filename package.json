@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node server"
+    "start": "node server",
+    "generate-cert": "openssl req -new -x509 -newkey rsa:2048 -sha256 -nodes -keyout .ssl/localhost.key -days 3560 -out .ssl/localhost.crt -config .ssl/certificate.cnf"
   },
   "dependencies": {
     "cors": "^2.8.5",
